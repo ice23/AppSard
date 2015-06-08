@@ -184,21 +184,21 @@
             $("#go").click(function () {
                 ThisBeachLat = localStorage.getItem('ThisBeachLat');
                 ThisBeachLon = localStorage.getItem('ThisBeachLon');
-                navigateTo(ThisBeachLat, ThisBeachLon, function () {
+                /*navigateTo(ThisBeachLat, ThisBeachLon, function () {
                     // alert("Successfully opened navigator");
                 }, function () {
                     alert("Error opening navigator");
-                })
+                })*/
             });
         });
 
 
         function navigateTo(lat, lon, successFn, errorFn) {
-                        alert('GO CLICKED');
+                        //alert('GO CLICKED');
                         
             deviceType = (navigator.userAgent.match(/iPad/i)) == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i)) == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
 
-             alert(deviceType + 'lat:' + lat + 'lon:' + lon);
+             //alert(deviceType + 'lat:' + lat + 'lon:' + lon);
             if (deviceType == "Android") {
                 var url = "geo:" + lat + "," + lon + " +;u=35";
                 //window.location = url;

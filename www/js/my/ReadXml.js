@@ -67,7 +67,7 @@
 function ReadXmlBeach() {
     jQuery.support.cors = true;
     //alert('sites');
-    
+    alert('ReadXmlBeach');
     $.ajax({
         type: "POST",
         contentType: "application/json; charset=utf-8",
@@ -115,7 +115,7 @@ function ReadXmlBeach() {
                 i = i + 1;
                 //sites.push(beach);
             });
-            //alert(sites.length);
+            alert(sites.length);
             //            expires = new Date();
             //            expires.setTime(expires.getTime() + (1000 * 3600 * 24 * 7));
             //            set_cookie('beachs', sites, expires);
@@ -136,7 +136,7 @@ function ReadXmlBeach() {
 function ReadXmlBeachById(Beach_ID) {
     jQuery.support.cors = true;
 
-    //alert('ReadXmlBeachById');
+    alert('ReadXmlBeachById');
     $.ajax({
         type: "POST",
         contentType: "application/json; charset=utf-8",
