@@ -195,12 +195,7 @@
 
         function navigateTo(lat, lon, successFn, errorFn) {
                         alert('GO CLICKED');
-                        alert('Device Name: '     + device.name     + '\n' + 
-                                        'Device Cordova: '  + device.cordova + '\n' + 
-                                        'Device Platform: ' + device.platform + '\n>' + 
-                                        'Device UUID: '     + device.uuid     + '<br />' + 
-                                        'Device Model: '    + device.model     + '<br />' +
-                                        'Device Version: ' + device.version + '<br />');
+                        
             deviceType = (navigator.userAgent.match(/iPad/i)) == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i)) == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
 
              alert(deviceType + 'lat:' + lat + 'lon:' + lon);
@@ -4177,7 +4172,7 @@ box-shadow:         1px 7px 16px 15px rgba(160, 162, 242, 0.93);">
                         </table>
                         <a id="A13" style="font-size: small"></a></li>
                 </ul>
-                <ul data-role="listview" data-inset="true" style="visibility:hidden">
+                <!--<ul data-role="listview" data-inset="true" style="visibility:hidden">
                     <li id="Li3"><span id="Span5">Effetto di transazione tra le pagine</span><span id="Span6"></span></li>
                     <li class="indpr-1 myindpr">
                         <table>
@@ -4207,7 +4202,7 @@ box-shadow:         1px 7px 16px 15px rgba(160, 162, 242, 0.93);">
                             </tr>
                         </table>
                         <a id="MyTransitionStorage" style="font-size: small"></a></li>
-                </ul>
+                </ul>-->
             </div>
             <!-- /content -->
         </div>
