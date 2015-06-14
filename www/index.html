@@ -198,11 +198,23 @@
                         
             deviceType = (navigator.userAgent.match(/iPad/i)) == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i)) == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
 
-             //alert(deviceType + 'lat:' + lat + 'lon:' + lon);
+            alert(deviceType + 'lat:' + lat + 'lon:' + lon + 'lat:' + mylat + 'lon:' + mylng);
+
+            
+            launchnavigator.navigate(
+                              [mylat, mylng],
+                              [lat, lon],
+                              function(){
+                                  alert("Plugin success");
+                              },
+                              function(error){
+                                  alert("Plugin error: "+ error);
+                              });
             if (deviceType == "Android") {
                 var url = "geo:" + lat + "," + lon + " +;u=35";
                 //window.location = url;
-                cordova.require('cordova/plugin/phonenavigator').doNavigate(lat, lon, successFn, errorFn);
+                //cordova.require('cordova/plugin/phonenavigator').doNavigate(lat, lon, successFn, errorFn);
+
             } else if (device.platform == "iOS") {
                 var url = "maps:daddr=" + lat + "," + lon;
                 window.location = url;
