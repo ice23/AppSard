@@ -154,8 +154,11 @@ $(document).ready(function () {
 
     function Search(mode) {
 
+        //alert('sites.length:' + sites.length + ' -- ' + mode);
+        if (sites.length == 0) {
+            ReadXmlBeach();
 
-
+        }
         var str = '';
         for (var i = 0; i < sites.length; i++) {
             var info = sites[i];
@@ -188,6 +191,7 @@ $(document).ready(function () {
             $('#' + keyImage).attr("src", imgurl);
             $('#' + keyli).find("label").html(nome);
 
+            $('#' + keyli).show();
             if (mode == 'like') {
                 if (localStorage.getItem('like_beach_' + i) != null) {
                     $('#' + keyli).show();

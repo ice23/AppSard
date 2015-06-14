@@ -674,7 +674,7 @@ $(document).on("pageshow", "#div_redirect", function (event) {
 $(document).on("pageshow", "#search", function (event) {
 
     $(document).ready(function () {
-        //alert('pageshow');
+  //      alert('pageshow');
 //        $("a[id^='test']").click(function () {
 //            //             alert('..this.val()');
 //            var id = $(this).attr('name');
@@ -688,23 +688,22 @@ $(document).on("pageshow", "#search", function (event) {
     });
 });
 
-//$('#search').on('pageshow', function (event, ui) {
-//    //alert('search');
-//    $(document).ready(function () {
+$('#search').on('pageshow', function (event, ui) {
+    //alert('search');
+    $(document).ready(function () {
+        $("a[id^='test']").click(function () {
+            //alert('this.val()');
+            var id = $(this).attr('name');
+            var name = $(this).attr('id');
+           // alert('id' + id );
+            window.location.href = "#Beach?id=" + id;
+            // $.mobile.changePage("#Beach?id=" + id);
+        });
 
-//        $("a[id^='test']").click(function () {
-//            alert('this.val()');
-//            var id = $(this).attr('name');
-//            var name = $(this).attr('id');
-//            alert('id' + id );
-//            window.location.href = "#Beach?id=" + id;
-//            // $.mobile.changePage("#Beach?id=" + id);
-//        });
 
+    });
 
-//    });
-
-//});
+});
 
 
 $('#likes').on('pageshow', function (event, ui) {
