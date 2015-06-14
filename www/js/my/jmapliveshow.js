@@ -210,6 +210,7 @@ function setMarkers(map, markers) {
                 google.maps.event.addListener(marker, "click", function () {
                     var lat2click = this.title.split('|')[1];
                     var lng2click = this.title.split('|')[2];
+                    //alert(lat2click + '/' + lat1click + ' - ' + lng2click + '/' + lng2click);
                     if (lat1click == lat2click && lng1click == lng2click) {
                        
                         lat1click = '';
@@ -264,7 +265,7 @@ function setMarkers(map, markers) {
                 var marker = new google.maps.Marker({
                     position: siteLatLng,
                     map: map,
-                    title: sites[0] + '|' + Distance,
+                    title: sites[0] + '|' + sites[1] + '|' + sites[2] + '|' + Distance,
                     zIndex: sites[3],
                     url: '#Beach?id=' + sites[8],
                     html: '<b>' + sites[0] + '</b> <br/>' + Distance + ' Clicca una seconda volta per avere maggiori informazioni'
@@ -277,6 +278,8 @@ function setMarkers(map, markers) {
                 google.maps.event.addListener(marker, "click", function () {
                     var lat2click = this.title.split('|')[1];
                     var lng2click = this.title.split('|')[2];
+                    //alert(this.title);
+                    //alert(lat2click + '/' + lat1click + ' - ' + lng2click + '/' + lng2click);
                     if (lat1click == lat2click && lng1click == lng2click) {
                         
                         lat1click = '';
